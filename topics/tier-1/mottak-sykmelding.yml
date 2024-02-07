@@ -1,0 +1,21 @@
+apiVersion: kafka.nais.io/v1
+kind: Topic
+metadata:
+  labels:
+    team: tsm
+    system: mottak
+  name: mottak-sykmelding
+  namespace: tsm
+spec:
+  acl:
+    - team: teamsykmelding
+      application: syfosmmottak
+      access: read
+  config:
+    cleanupPolicy: delete
+    minimumInSyncReplicas: 3
+    partitions: 10
+    replication: 3
+    retentionBytes: -1
+    retentionHours: -1
+  pool: nav-dev
