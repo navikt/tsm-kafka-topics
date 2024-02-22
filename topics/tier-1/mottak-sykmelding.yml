@@ -11,6 +11,9 @@ spec:
     - team: teamsykmelding
       application: syfosmmottak
       access: read
+    - team: tsm
+      application: regulus-maximus
+      access: read
   config:
     cleanupPolicy: delete
     minimumInSyncReplicas: 3
