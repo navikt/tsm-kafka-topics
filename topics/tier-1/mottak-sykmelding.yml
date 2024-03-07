@@ -21,4 +21,4 @@ spec:
     replication: 3
     retentionBytes: -1
     retentionHours: -1
-  pool: nav-dev
+  pool: {{kafka-pool}}

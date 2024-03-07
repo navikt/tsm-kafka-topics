@@ -4,9 +4,7 @@ on:
     branch:
       '**'
 env:
-  TOPIC_FILES:
-    - topics/tier-1/mottak-sykmelding.yml
-    - topics/tier-temp/regdump.yml
+  TOPIC_FILES: topics/tier-1/mottak-sykmelding.yml,topics/tier-temp/regdump.yml
 jobs:
   deploy-to-dev:
     name: Deploy to dev-gcp
@@ -22,4 +20,4 @@ jobs:
         env:
           CLUSTER: dev-gcp
           VAR: kafka-pool=nav-dev
-          RESOURCE: ${{ join(',', env.TOPIC_FILES) }}
+          RESOURCE: ${{ env.TOPIC_FILES }}
