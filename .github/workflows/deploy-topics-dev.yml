@@ -4,7 +4,7 @@ on:
     branch:
       '**'
 env:
-  TOPIC_FILES: topics/tier-1/mottak-sykmelding.yml,topics/tier-temp/regdump.yml
+  TOPIC_FILES: topics/tier-1/mottak-sykmelding.yml,topics/tier-temp/regdump.yml,topics/tier-1/migrert-sykmelding.yml,topics/tier-1/sykmeldinger-input.yml
 jobs:
   deploy-to-dev:
     name: Deploy to dev-gcp
