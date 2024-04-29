@@ -16,7 +16,7 @@ spec:
       access: read
     - team: tsm
       application: migrator
-      access: write
+      access: readwrite
   config:
     cleanupPolicy: delete
     minimumInSyncReplicas: 3
