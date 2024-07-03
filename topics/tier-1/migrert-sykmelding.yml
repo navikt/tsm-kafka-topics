@@ -6,6 +6,8 @@ metadata:
     system: mottak
   name: migrert-sykmelding
   namespace: tsm
+  annotations:
+    kafka.nais.io/removeDataWhenResourceIsDeleted: "true"
 spec:
   acl:
     - team: teamsykmelding
