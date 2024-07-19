@@ -8,15 +8,9 @@ metadata:
   namespace: tsm
 spec:
   acl:
-    - team: teamsykmelding
-      application: syfosmmottak
-      access: read
-    - team: tsm
-      application: regulus-maximus
-      access: read
     - team: tsm
       application: migrator
-      access: write
+      access: readwrite
   config:
     cleanupPolicy: delete
     minimumInSyncReplicas: 3
