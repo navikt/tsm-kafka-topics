@@ -6,13 +6,15 @@ metadata:
     system: mottak
   name: sykmeldinger-input
   namespace: tsm
+  annotations:
+    kafka.nais.io/removeDataWhenResourceIsDeleted: "true"
 spec:
   acl:
     - team: tsm
       application: migrator
       access: readwrite
   config:
-    cleanupPolicy: delete
+    cleanupPolicy: compact
     minimumInSyncReplicas: 3
     partitions: 10
     replication: 3
