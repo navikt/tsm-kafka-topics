@@ -13,6 +13,9 @@ spec:
     - team: tsm
       application: migrator
       access: readwrite
+    - team: tsm
+      application: tsm-register
+      access: read
   config:
     cleanupPolicy: compact
     minimumInSyncReplicas: 3
