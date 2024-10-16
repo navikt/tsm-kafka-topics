@@ -11,10 +11,10 @@ metadata:
 spec:
   acl:
     - team: tsm
-      application: migrator
+      application: regulus-maximus
       access: write
     - team: tsm
-      application: regulus-maximus
+      application: tsm-gateway
       access: read
   config:
     cleanupPolicy: compact
