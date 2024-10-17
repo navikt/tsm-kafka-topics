@@ -12,7 +12,7 @@ spec:
   acl:
     - team: tsm
       application: migrator
-      access: write
+      access: readwrite
     - team: tsm
       application: regulus-maximus
       access: read
