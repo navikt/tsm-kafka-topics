@@ -4,7 +4,7 @@ metadata:
   labels:
     team: tsm
     system: mottak
-  name: tsmsykmelding-raw
+  name: tsm-sykmeldinger
   namespace: tsm
   annotations:
     kafka.nais.io/removeDataWhenResourceIsDeleted: "true"
