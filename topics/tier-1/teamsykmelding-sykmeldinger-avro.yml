@@ -1,0 +1,26 @@
+apiVersion: kafka.nais.io/v1
+kind: Topic
+metadata:
+  labels:
+    team: tsm
+    system: mottak
+  name: teamsykmelding-sykmeldinger-avro
+  namespace: tsm
+  annotations:
+    kafka.nais.io/removeDataWhenResourceIsDeleted: "true"
+spec:
+  acl:
+    - team: tsm
+      application: migrator
+      access: readwrite
+    - team: tsm
+      application: tsm-register
+      access: read
+  config:
+    cleanupPolicy: compact
+    minimumInSyncReplicas: 3
+    partitions: 10
+    replication: 3
+    retentionBytes: -1
+    retentionHours: -1
+  pool: {{kafka-pool}}
