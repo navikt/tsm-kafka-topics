@@ -4,13 +4,18 @@ metadata:
   labels:
     team: tsm
     system: mottak
-  name: teamsykmelding-sykmeldinger
+  name: sykmeldinger-input
   namespace: tsm
+  annotations:
+    kafka.nais.io/removeDataWhenResourceIsDeleted: "true"
 spec:
   acl:
     - team: tsm
       application: migrator
       access: readwrite
+    - team: tsm
+      application: regulus-maximus
+      access: read
   config:
     cleanupPolicy: compact
     minimumInSyncReplicas: 3
