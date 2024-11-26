@@ -6,8 +6,6 @@ metadata:
     system: mottak
   name: tsm-sykmeldinger
   namespace: tsm
-  annotations:
-    kafka.nais.io/removeDataWhenResourceIsDeleted: "true"
 spec:
   acl:
     - team: tsm
