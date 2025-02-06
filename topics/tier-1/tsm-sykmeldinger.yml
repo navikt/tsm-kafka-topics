@@ -11,6 +11,9 @@ spec:
     - team: tsm
       application: regulus-maximus
       access: write
+    - team: tsm
+      application: sykmeldinger-gateway
+      access: read
   config:
     cleanupPolicy: compact
     minimumInSyncReplicas: 3
