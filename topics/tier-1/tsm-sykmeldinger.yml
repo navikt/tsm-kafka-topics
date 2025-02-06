@@ -6,11 +6,13 @@ metadata:
     system: mottak
   name: tsm-sykmeldinger
   namespace: tsm
+  annotations:
+    kafka.nais.io/removeDataWhenResourceIsDeleted: "true"
 spec:
   acl:
     - team: tsm
       application: regulus-maximus
-      access: write
+      access: readwrite
   config:
     cleanupPolicy: compact
     minimumInSyncReplicas: 3
