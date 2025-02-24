@@ -6,13 +6,14 @@ metadata:
     system: mottak
   name: tsm-sykmeldinger
   namespace: tsm
-  annotations:
-    kafka.nais.io/removeDataWhenResourceIsDeleted: "true"
 spec:
   acl:
     - team: tsm
       application: regulus-maximus
       access: write
+    - team: disykefravar
+      application: dvh-sykefravar-airflow-kafka
+      access: read
     - team: tsm
       application: sykmeldinger-gateway
       access: read
