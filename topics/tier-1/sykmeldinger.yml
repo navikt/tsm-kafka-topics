@@ -3,18 +3,15 @@ kind: Topic
 metadata:
   labels:
     team: tsm
-    system: mottak
-  name: tsm-sykmeldinger
+  name: sykmeldinger
   namespace: tsm
-  annotations:
-    kafka.nais.io/removeDataWhenResourceIsDeleted: "true"
 spec:
   acl:
     - team: tsm
       application: regulus-maximus
-      access: write
-    - team: tsm
-      application: sykmeldinger-gateway
+      access: readwrite
+    - team: disykefravar
+      application: dvh-sykefravar-airflow-kafka
       access: read
   config:
     cleanupPolicy: compact
