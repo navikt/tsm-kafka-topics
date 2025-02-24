@@ -17,6 +17,9 @@ spec:
     - team: tsm
       application: sykmeldinger-gateway
       access: read
+    - team: flex
+      application: flex-sykmeldinger-backend
+      access: read
   config:
     cleanupPolicy: compact
     minimumInSyncReplicas: 3
