@@ -10,7 +10,7 @@ spec:
   acl:
     - team: tsm
       application: regulus-maximus
-      access: write
+      access: readwrite
     - team: disykefravar
       application: dvh-sykefravar-airflow-kafka
       access: read
