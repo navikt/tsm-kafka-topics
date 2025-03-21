@@ -14,11 +14,11 @@ spec:
     - team: disykefravar
       application: dvh-sykefravar-airflow-kafka
       access: read
-    - team: tsm
-      application: sykmeldinger-gateway
-      access: read
     - team: flex
       application: flex-sykmeldinger-backend
+      access: read
+    - team: tbd
+      application: sparkel-tilbakedatert
       access: read
   config:
     cleanupPolicy: compact
