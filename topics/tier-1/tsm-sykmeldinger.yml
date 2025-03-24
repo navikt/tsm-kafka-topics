@@ -11,6 +11,9 @@ spec:
     - team: tsm
       application: regulus-maximus
       access: readwrite
+    - team: tsm
+      application: journey
+      access: read
     - team: disykefravar
       application: dvh-sykefravar-airflow-kafka
       access: read
