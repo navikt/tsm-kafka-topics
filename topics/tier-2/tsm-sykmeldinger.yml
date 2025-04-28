@@ -1,0 +1,33 @@
+apiVersion: kafka.nais.io/v1
+kind: Topic
+metadata:
+  labels:
+    team: tsm
+    system: mottak
+  name: sykmeldinger
+  namespace: tsm
+spec:
+  acl:
+    - team: tsm
+      application: regulus-maximus
+      access: readwrite
+    - team: tsm
+      application: journey
+      access: read
+    - team: disykefravar
+      application: dvh-sykefravar-airflow-kafka
+      access: read
+    - team: flex
+      application: flex-sykmeldinger-backend
+      access: read
+    - team: tbd
+      application: sparkel-tilbakedatert
+      access: read
+  config:
+    cleanupPolicy: compact
+    minimumInSyncReplicas: 3
+    partitions: 10
+    replication: 3
+    retentionBytes: -1
+    retentionHours: -1
+  pool: {{kafka-pool}}
