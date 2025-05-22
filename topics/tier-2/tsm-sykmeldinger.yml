@@ -23,6 +23,9 @@ spec:
     - team: tbd
       application: sparkel-tilbakedatert
       access: read
+    - team: tsm
+      application: syk-inn-api
+      access: read
   config:
     cleanupPolicy: compact
     minimumInSyncReplicas: 3
