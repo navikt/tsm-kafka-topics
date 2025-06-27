@@ -9,6 +9,9 @@ metadata:
 spec:
   acl:
     - team: tsm
+      application: migrator
+      access: read
+    - team: tsm
       application: regulus-maximus
       access: readwrite
     - team: tsm
