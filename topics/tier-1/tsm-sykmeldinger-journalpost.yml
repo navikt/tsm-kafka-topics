@@ -1,0 +1,24 @@
+apiVersion: kafka.nais.io/v1
+kind: Topic
+metadata:
+  labels:
+    team: tsm
+    system: mottak
+  name: tsm-sykmeldinger-journalpost
+  namespace: tsm
+spec:
+  acl:
+    - team: tsm
+      application: journey
+      access: write
+    - team: tsm
+      application: infotoast
+      access: read
+  config:
+    cleanupPolicy: compact
+    minimumInSyncReplicas: 3
+    partitions: 10
+    replication: 3
+    retentionBytes: -1
+    retentionHours: -1
+  pool: {{kafka-pool}}
