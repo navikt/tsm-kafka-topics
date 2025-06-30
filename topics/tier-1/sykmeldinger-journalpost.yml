@@ -4,7 +4,7 @@ metadata:
   labels:
     team: tsm
     system: mottak
-  name: tsm-sykmeldinger-journalpost
+  name: sykmeldinger-journalpost
   namespace: tsm
 spec:
   acl:
