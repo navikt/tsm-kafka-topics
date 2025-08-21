@@ -17,6 +17,9 @@ spec:
     - team: tsm
       application: syk-inn-api
       access: readwrite
+    - team: tsm
+      application: tsm-input-dolly
+      access: write
   config:
     cleanupPolicy: compact
     minimumInSyncReplicas: 3
