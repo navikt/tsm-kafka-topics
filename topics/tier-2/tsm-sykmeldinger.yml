@@ -32,6 +32,9 @@ spec:
     - team: tsm
       application: tsm-input-dolly
       access: read
+    - team : tsm
+      application: tsm-manuell-api
+      access: read
   config:
     cleanupPolicy: compact
     minimumInSyncReplicas: 3
