@@ -13,7 +13,7 @@ spec:
       access: read
     - team: tsm
       application: regulus-maximus
-      access: readwrite
+      access: write
     - team: tsm
       application: journey
       access: read
