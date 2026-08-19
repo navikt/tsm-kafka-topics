@@ -1,0 +1,23 @@
+apiVersion: kafka.nais.io/v1
+kind: Topic
+metadata:
+  labels:
+    team: tsm
+  name: pik
+  namespace: tsm
+spec:
+  acl:
+    - team: tsm
+      application: syk-inn-api
+      access: write
+    - team: tsm
+      application: tsm-pik
+      access: read
+  config:
+    cleanupPolicy: compact
+    minimumInSyncReplicas: 3
+    partitions: 10
+    replication: 3
+    retentionBytes: -1
+    retentionHours: -1
+  pool: {{kafka-pool}}
