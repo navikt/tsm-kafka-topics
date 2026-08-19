@@ -19,5 +19,5 @@ spec:
     partitions: 10
     replication: 3
     retentionBytes: -1
-    retentionHours: -1
+    retentionHours: 720
   pool: {{kafka-pool}}
