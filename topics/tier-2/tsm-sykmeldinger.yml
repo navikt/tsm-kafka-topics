@@ -41,6 +41,9 @@ spec:
     - team: tsm
       application: tsm-behandlingsdager
       access: read
+    - team: tsm
+      application: tsm-bq-sink
+      access: read
   config:
     cleanupPolicy: compact
     minimumInSyncReplicas: 3
