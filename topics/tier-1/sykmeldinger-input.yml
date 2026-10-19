@@ -20,6 +20,9 @@ spec:
     - team: tsm
       application: tsm-input-dolly
       access: write
+    - team: tsm
+      application: infotoast
+      access: read  
   config:
     cleanupPolicy: compact
     minimumInSyncReplicas: 3
