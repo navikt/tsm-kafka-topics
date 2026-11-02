@@ -44,9 +44,6 @@ spec:
     - team: tsm
       application: tsm-bq-sink
       access: read
-    - team: tsm
-      application: infotoast
-      access: read        
   config:
     cleanupPolicy: compact
     minimumInSyncReplicas: 3
